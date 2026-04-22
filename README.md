@@ -89,7 +89,6 @@ see file: '\images'
 ## 📊 UML Diagram
 see file: '\UMLSTRATEGICO3D.txt'
 
-
 ## ✅ Requirements Implementation (Course Evaluation)
 
 | #  | Requirement                       | Status               |
