@@ -1,0 +1,61 @@
++----------------------+
+|    GridManager       |
++----------------------+
+| - GridMap            |
+| - Towers             |
+| - CurrentPlayer      |
+| - CurrentPhase       |
++----------------------+
+| + GenerateMap()      |
+| + HandleMouseClick() |
+| + TryAttack()        |
+| + PlayAIUnit()       |
+| + UpdateUI()         |
+| + SpawnTowers()      |
++----------------------+
+
+        | uses
+        |------------------------------|
+        |              |               |
+        v              v               v
+
++------------------+   +----------------------+   +----------------------+
+|     BaseUnit     |   |   AI Logic           |   |    Tower             |
++------------------+   +----------------------+   +----------------------+
+| - CurrentHP      |   | + A* Pathfinding     |   | - Position           |
+| - MoveRange      |   | + Heuristic Scoring  |   | - State             |
+| - AttackRange    |   | + Target Selection   |   | - OwnerPlayer       |
+| - OwnerPlayer    |   +----------------------+   +----------------------+
++------------------+
+
+        ▲
+        |
+   ------------- 
+   |           |
+   v           v
++------------+  +------------+
+| SniperUnit |  | BrawlerUnit|
++------------+  +------------+
+
+        |
+        | interacts with
+        v
+
++----------------------+
+|     UI (UMG)         |
++----------------------+
+| WBP_StartMenu        |
+| WBP_GameHUD          |
++----------------------+
+
+        |
+        | Unreal Framework
+        v
+
++----------------------+
+| StrategicoGameMode   |
++----------------------+
+
++----------------------+
+| StrategicoCameraPawn |
++----------------------+
